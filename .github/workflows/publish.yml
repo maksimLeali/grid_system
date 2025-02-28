@@ -4,8 +4,8 @@ on:
 
   # or 2) Alternatively, you could trigger on tag push:
   push:
-    tags:
-      - "v*.*.*"
+    branches:
+      - main
 
 jobs:
   publish:
