@@ -27,7 +27,7 @@ jobs:
         run: yarn build
 
       - name: Publish to npm
-        run: yarn publish --non-interactive --new-version ${{ steps.get_version.outputs.VERSION }} 
+        run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
