@@ -1,13 +1,11 @@
 name: Publish to npm
 
 on:
-  # 1) Trigger this workflow when creating a new GitHub release
-  release:
-    types: [published]
+
   # or 2) Alternatively, you could trigger on tag push:
-  # push:
-  #   tags:
-  #     - "v*.*.*"
+  push:
+    tags:
+      - "v*.*.*"
 
 jobs:
   publish:
