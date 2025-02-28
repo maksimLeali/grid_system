@@ -32,9 +32,6 @@ export type ColorKeys =
   | "danger"
   | "danger-dark"
   | "danger-light"
-  | "glass-dark"
-  | "glass"
-  | "glass-light";
 
 export const colors: Record<ColorKeys, string> = {
   "primary": "var(--primary)",
@@ -69,10 +66,7 @@ export const colors: Record<ColorKeys, string> = {
   "success-light": "var(--success-light)",
   "danger": "var(--danger)",
   "danger-dark": "var(--danger-dark)",
-  "danger-light": "var(--danger-light)",
-  "glass-dark": "var(--glass-dark)",
-  "glass": "var(--glass)",
-  "glass-light": "var(--glass-light)"
+  "danger-light": "var(--danger-light)"
 };
 
 export function isColorKey(key: string): key is ColorKeys {

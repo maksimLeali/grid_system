@@ -1,24 +1,25 @@
 {
-    "compilerOptions": {
-      "target": "ES2020",
-      "useDefineForClassFields": true,
-      "lib": ["ES2020", "DOM", "DOM.Iterable"],
-      "module": "ESNext",
-      "skipLibCheck": true,
-  
-      /* Bundler mode */
-      "moduleResolution": "bundler",
-      "allowImportingTsExtensions": true,
-      "resolveJsonModule": true,
-      "isolatedModules": true,
-      "noEmit": true,
-      "jsx": "react-jsx",      
-      /* Linting */
-      "strict": true,
-      "noUnusedLocals": true,
-      "noUnusedParameters": true,
-      "noFallthroughCasesInSwitch": true
-    },
-    "include": ["src"]    
-  }
-  
+  "compilerOptions": {
+    // Make sure it resolves modules like Node
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "target": "ES2019",
+    "jsx": "react", 
+    // For default imports like `import React from 'react'`
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    // If you import .json files
+    "resolveJsonModule": true,
+
+    // Good for strict TypeScript
+    "strict": true,
+    "noImplicitAny": true,
+
+    // Generate .d.ts
+    "declaration": true,
+    "declarationDir": "dist/types",
+    "emitDeclarationOnly": false
+  },
+  "include": ["src"]
+}
