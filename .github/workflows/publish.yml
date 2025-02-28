@@ -1,8 +1,6 @@
 name: Publish to npm
 
 on:
-
-  # or 2) Alternatively, you could trigger on tag push:
   push:
     branches:
       - main
@@ -15,10 +13,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Use Node.js 20 (or another version)
+      - name: Use Node.js 20
         uses: actions/setup-node@v3
         with:
           node-version: 20
+          registry-url: "https://registry.npmjs.org/"
+
+      - name: Configure npm authentication
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
       - name: Install dependencies
         run: yarn install
@@ -27,15 +29,6 @@ jobs:
         run: yarn build
 
       - name: Publish to npm
-        run: yarn publish
+        run: yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      # If you want to automatically bump the version based on the release tag,
-      # you can parse the release tag or rely on a separate step. For instance:
-      - name: Get version from tag
-        id: get_version
-        run: |
-          # E.g. if your release tag is "v1.0.3", parse out "1.0.3"
-          VERSION="${GITHUB_REF#refs/tags/v}"
-          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
