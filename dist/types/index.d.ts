@@ -5,5 +5,15 @@ export const $color: (color: ColorKeys | string) => string;
 export const $cssTRBL: (top: number, right?: number, bottom?: number, left?: number) => string;
 export const $breakPoint: (val: number) => string;
 export const DebugGrid: React.FC;
+type GridVariables = {
+    [key: string]: string;
+};
+/**
+ * Merges the default variables with the user config and returns a CSS string.
+ *
+ * @param userConfig Optional user configuration to override default variables.
+ * @returns A CSS string containing the merged custom properties.
+ */
+export function generateCss(userConfig?: GridVariables): string;
 
 //# sourceMappingURL=index.d.ts.map

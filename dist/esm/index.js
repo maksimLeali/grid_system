@@ -28,6 +28,10 @@ function $parcel$exportWildcard(dest, source) {
 
   return dest;
 }
+
+function $parcel$interopDefault(a) {
+  return a && a.__esModule ? a.default : a;
+}
 var $ac4891bf196f4904$exports = {};
 
 $parcel$export($ac4891bf196f4904$exports, "DebugGrid", () => $ac4891bf196f4904$export$43c8e9a4fa65db5d);
@@ -199,8 +203,22 @@ const $ac4891bf196f4904$var$Action = (0, $26Zo0$styledcomponents).button`
 
 
 
- // export your color utilities, etc.
+// src/theme/generateCss.ts
+var $02ebced76e5dccfa$exports = {};
+$02ebced76e5dccfa$exports = JSON.parse("{\"max-width\":\"1440px\",\"max-grid-size\":\"min(100vw, var(--max-width))\",\"grid-columns-number\":\"52\",\"grid-color\":\"#aaa7\",\"white-light\":\"#edf6f8\",\"white\":\"#daedf1\",\"white-dark\":\"#b6dae2\",\"black-light\":\"#18393e\",\"black\":\"#2b2b2b\",\"black-dark\":\"#0F0F0F\",\"primary-light\":\"#117888\",\"primary-light-shade\":\"#11788888\",\"primary\":\"#0b505b\",\"primary-shade\":\"#0b505b88\",\"primary-dark\":\"#06282d\",\"primary-dark-shade\":\"#06282d88\",\"secondary-light\":\"#9a329a\",\"secondary-light-shade\":\"#9a329a88\",\"secondary\":\"#5c1e5c\",\"secondary-shade\":\"#5c1e5c88\",\"secondary-dark\":\"#270c27\",\"secondary-dark-shade\":\"#270c2788\",\"tertiary-light\":\"#99fdff\",\"tertiary-light-shade\":\"#99fdff88\",\"tertiary\":\"#00fbff\",\"tertiary-shade\":\"#00fbff88\",\"tertiary-dark\":\"#00c9cc\",\"tertiary-dark-shade\":\"#00c9cc88\",\"gray\":\"#9a9a9a\",\"gray-light\":\"#e9e9e9\",\"gray-dark\":\"#454545\",\"success\":\"#2dd36f\",\"success-dark\":\"#28ba62\",\"success-light\":\"#42d77d\",\"danger\":\"#eb445a\",\"danger-dark\":\"#cf3c4f\",\"danger-light\":\"#ed576b\"}");
 
 
-export {$ac4891bf196f4904$export$43c8e9a4fa65db5d as DebugGrid, $6b7b5f421cd0dd18$export$d736a794e9620a72 as $uw, $6b7b5f421cd0dd18$export$6ab51d0c2eb33fad as $color, $6b7b5f421cd0dd18$export$76e7c09f7f6671cc as $cssTRBL, $6b7b5f421cd0dd18$export$4aed85427fc6df30 as $breakPoint};
+function $8cfa8ff4699e48ec$export$a011a3162271e5f9(userConfig) {
+    const mergedVariables = {
+        ...(0, (/*@__PURE__*/$parcel$interopDefault($02ebced76e5dccfa$exports))),
+        ...userConfig
+    };
+    const cssVars = Object.entries(mergedVariables).map(([key, value])=>`  --${key}: ${value};`).join("\n");
+    return `:root {\n${cssVars}\n}`;
+}
+
+
+
+
+export {$8cfa8ff4699e48ec$export$a011a3162271e5f9 as generateCss, $ac4891bf196f4904$export$43c8e9a4fa65db5d as DebugGrid, $6b7b5f421cd0dd18$export$d736a794e9620a72 as $uw, $6b7b5f421cd0dd18$export$6ab51d0c2eb33fad as $color, $6b7b5f421cd0dd18$export$76e7c09f7f6671cc as $cssTRBL, $6b7b5f421cd0dd18$export$4aed85427fc6df30 as $breakPoint};
 //# sourceMappingURL=index.js.map
