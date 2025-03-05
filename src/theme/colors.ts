@@ -33,7 +33,7 @@ export type ColorKeys =
   | "danger-dark"
   | "danger-light"
 
-export const colors: Record<ColorKeys, string> = {
+export let colors: Record<ColorKeys | string, string> = {
   "primary": "var(--primary)",
   "primary-shade": "var(--primary-shade)",
   "primary-light": "var(--primary-light)",
@@ -68,7 +68,3 @@ export const colors: Record<ColorKeys, string> = {
   "danger-dark": "var(--danger-dark)",
   "danger-light": "var(--danger-light)"
 };
-
-export function isColorKey(key: string): key is ColorKeys {
-  return Object.keys(colors).includes(key);
-}

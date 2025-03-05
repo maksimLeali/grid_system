@@ -1,8 +1,9 @@
 {
-    "max-width": "1440px",
-    "max-grid-size": "min(100vw, var(--max-width))",
-    "grid-columns-number": "52",
-    "grid-color": "#aaa7",
+  "max-width": "1440px",
+  "max-grid-size": "min(100vw, var(--max-width))",
+  "grid-columns-number": "48",
+  "grid-color": "#aaa7",
+  "colors": {
     "white-light": "#edf6f8",
     "white": "#daedf1",
     "white-dark": "#b6dae2",
@@ -37,3 +38,4 @@
     "danger-dark": "#cf3c4f",
     "danger-light": "#ed576b"
   }
+}
