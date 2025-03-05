@@ -23,6 +23,11 @@
       "distDir": "dist/esm"
     }
   },
+  "files": [
+    "dist/cjs",
+    "dist/esm",
+    "dist/types"
+  ],
   "devDependencies": {
     "@parcel/transformer-typescript-types": "^2.13.3",
     "@parcel/validator-typescript": "^2.8.0",
